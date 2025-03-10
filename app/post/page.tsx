@@ -1,34 +1,36 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft } from "lucide-react"
-import Image from "next/image"
-import { recommendationsData } from "@/lib/recommendations-data"
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
+import { recommendationsData } from "@/lib/recommendations-data";
 
 export default function PostPage() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const [post, setPost] = useState(null)
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [post, setPost] = useState(null);
 
   useEffect(() => {
-    const id = searchParams.get("id")
+    const id = searchParams.get("id");
     if (id) {
-      const foundPost = recommendationsData.find((p) => p.id === Number.parseInt(id))
+      const foundPost = recommendationsData.find(
+        (p) => p.id === Number.parseInt(id)
+      );
       if (foundPost) {
-        setPost(foundPost)
+        setPost(foundPost);
       } else {
-        router.push("/recommendations")
+        router.push("/recommendations");
       }
     } else {
-      router.push("/recommendations")
+      router.push("/recommendations");
     }
-  }, [searchParams, router])
+  }, [searchParams, router]);
 
   if (!post) {
-    return <div className="container p-4 text-center">Loading...</div>
+    return <div className="container p-4 text-center">Loading...</div>;
   }
 
   return (
@@ -45,7 +47,7 @@ export default function PostPage() {
       <Card className="bg-red-100 border-red-200">
         <div className="relative h-56 w-full">
           <Image
-            src={`/placeholder.svg?height=400&width=600&text=${encodeURIComponent(post.title)}`}
+            src={post.image}
             alt={post.title}
             fill
             className="object-cover"
@@ -59,6 +61,5 @@ export default function PostPage() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-
