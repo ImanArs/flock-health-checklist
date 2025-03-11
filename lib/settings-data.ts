@@ -9,8 +9,4 @@ export const settingsData = {
     content:
       "https://www.privacypolicies.com/live/ffe243d8-3d54-4fa8-abc1-65dd1c3074cc",
   },
-  support: {
-    title: "Support",
-    content: "https://sites.google.com/view/flockhealthchecklist/support-form",
-  },
 };
