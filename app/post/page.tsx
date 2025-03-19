@@ -43,7 +43,11 @@ export default function PostPage() {
         <ArrowLeft className="h-4 w-4 mr-2" />
         Back to Recommendations
       </Button>
-
+      <p className="p-1 px-2 rounded-[12px] text-xs bg-red-100 text-red-800 mb-6">
+        This application provides general health recommendations; however, for
+        accurate medical advice and diagnosis, it is recommended to consult a
+        qualified physician.
+      </p>
       <Card className="bg-red-100 border-red-200">
         <div className="relative h-56 w-full">
           <Image

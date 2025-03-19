@@ -9,6 +9,11 @@ import { recommendationsData } from "@/lib/recommendations-data";
 export default function RecommendationsPage() {
   return (
     <div className="container px-4 py-6 max-w-md mx-auto">
+      <p className="p-1 px-2 rounded-[12px] text-xs bg-red-100 text-red-800 mb-6">
+        This application provides general health recommendations; however, for
+        accurate medical advice and diagnosis, it is recommended to consult a
+        qualified physician.
+      </p>
       <h1 className="text-2xl font-bold mb-6 text-red-800">Recommendations</h1>
 
       <div className="space-y-4">

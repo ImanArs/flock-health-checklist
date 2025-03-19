@@ -19,6 +19,11 @@ export default function Home() {
 
   return (
     <div className="container px-4 py-6 max-w-md mx-auto">
+      <p className="p-1 px-2 rounded-[12px] text-xs bg-red-100 text-red-800 mb-6">
+        This application provides general health recommendations; however, for
+        accurate medical advice and diagnosis, it is recommended to consult a
+        qualified physician.
+      </p>
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-2xl font-bold text-red-800">Welcome to</h1>
