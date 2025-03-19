@@ -65,7 +65,7 @@ export default function PostPage() {
                 href={post.info}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-red-900"
+                className="underline hover:text-red-900 text-wrap break-all"
               >
                 {post.info}
               </a>
