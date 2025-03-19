@@ -58,6 +58,19 @@ export default function PostPage() {
           <div className="prose prose-red max-w-none">
             <p className="text-red-800 whitespace-pre-line">{post.content}</p>
           </div>
+          {post.info && (
+            <div className="mt-4 text-sm text-red-700">
+              Source:{" "}
+              <a
+                href={post.info}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-red-900"
+              >
+                {post.info}
+              </a>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
